@@ -1,1 +1,18 @@
+import yfinance as yf
+import pandas as pd
+
+
+nvda = yf.Ticker("NVDA")
+data = nvda.history(period="max")
+
+serie1 = pd.Series(data['Close'], index=data.index)
+
+gold = yf.Ticker("GLD")
+data = gold.history(period="max")
+
+
+serie2 = pd.Series(data['Close'], index=data.index)
+
+
+
 
